@@ -1,0 +1,25 @@
+{
+  "name": "web-notes",
+  "version": "1.0.0",
+  "description": "We are going to make a web app that stores notes we take in class. It will be able to list our notes and add new notes.  In the process, we'll learn about a very simple in-memory data store, server side templates, serving static files like css, request body formats, how to post data from a web page to a server and finally how to handle posted data on the server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsaiahIJV/web-notes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsaiahIJV/web-notes/issues"
+  },
+  "homepage": "https://github.com/IsaiahIJV/web-notes#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  }
+}
