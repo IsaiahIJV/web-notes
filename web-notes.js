@@ -8,10 +8,22 @@ const notes = [
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
+
 // app.get('/', (req, res) => res.send('Web Notes'))
 // app.use('/', express.static('views'));
 
 app.use(morgan('tiny')); 
+
+app.delete('/notes/:id',function (req,res) {
+  var id = req.params.id;
+if (id < notes.length && id >= 0){
+  notes.splice(id,1);
+  res.status(200).send("\n Note Deleted at " + id + "\n\n");//200
+} else {
+    res.status(404).send("Message not located");
+  }
+
+});
 
 app.get('/', (req, res) => {
   res.render('notes', { notes: notes });
