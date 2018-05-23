@@ -13,6 +13,10 @@ const morgan = require('morgan');
 // app.use('/', express.static('views'));
 
 app.use(morgan('tiny')); 
+app.set('view engine', 'ejs');
+app.use('/css', express.static('css'));
+app.use('/js',express.static('js'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.delete('/notes/:id',function (req,res) {
   var id = req.params.id;
@@ -31,9 +35,7 @@ app.get('/', (req, res) => {
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
-app.set('view engine', 'ejs');
-app.use('/css', express.static('css'));
-app.use(bodyParser.urlencoded({ extended: true }));
+
 
 app.post('/notes', (req, res) => { 
   notes.push(req.body.note);
