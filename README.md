@@ -1,8 +1,8 @@
 Install dependencies
-npm install
+ npm install
 
 Serve on localhost:3000
-npm start
+ npm start
 
 If you run into the issue of being unable to start the app then you may have to change the script file in package.json
 Example :
@@ -12,4 +12,4 @@ Example :
 }
 
 Build for production
-npm run build
+ npm run build
